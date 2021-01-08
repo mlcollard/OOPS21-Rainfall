@@ -9,14 +9,12 @@
 #include <iomanip>
 #include <vector>
 
-using namespace std;
-
 int main() {
-    vector<float> rainfall;
+    std::vector<float> rainfall;
     float t;
     float m;
     float n;
-    while (cin >> n) {
+    while (std::cin >> n) {
         rainfall.push_back(n);
     }
     t = rainfall[0];
@@ -26,6 +24,6 @@ int main() {
         if (rainfall[i] > m)
             m = rainfall[i];
     }
-    cout << "Average Hourly Rainfall: " << std::fixed << std::setprecision(2) << (t / rainfall.size()) << " hundreds of inches" << '\n';
-    cout << "Heaviest Hourly Rainfall: " << m << " hundreds of inches" << '\n';
+    std::cout << "Average Hourly Rainfall: " << std::fixed << std::setprecision(2) << (t / rainfall.size()) << " hundreds of inches" << '\n';
+    std::cout << "Heaviest Hourly Rainfall: " << m << " hundreds of inches" << '\n';
 }
