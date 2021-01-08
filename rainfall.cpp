@@ -25,6 +25,7 @@ int main() {
     for (int i = 1; i < rainfall.size(); ++i) {
         total += rainfall[i];
     }
+    auto average = total / rainfall.size();
 
     // calculate heaviest rainfall
     auto max = rainfall[0];
@@ -34,7 +35,7 @@ int main() {
     }
 
     // output the rainfall report
-    std::cout << "Average Hourly Rainfall: " << std::fixed << std::setprecision(2) << (total / rainfall.size()) << " hundreds of inches" << '\n';
+    std::cout << "Average Hourly Rainfall: " << std::fixed << std::setprecision(2) << average << " hundreds of inches" << '\n';
     std::cout << "Heaviest Hourly Rainfall: " << max << " hundreds of inches" << '\n';
 
     return 0;
