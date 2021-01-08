@@ -26,4 +26,6 @@ int main() {
     }
     std::cout << "Average Hourly Rainfall: " << std::fixed << std::setprecision(2) << (t / rainfall.size()) << " hundreds of inches" << '\n';
     std::cout << "Heaviest Hourly Rainfall: " << m << " hundreds of inches" << '\n';
+
+    return 0;
 }
