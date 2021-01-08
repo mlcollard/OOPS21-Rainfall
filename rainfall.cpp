@@ -19,6 +19,8 @@ int main() {
     while (std::cin >> n) {
         rainfall.push_back(n);
     }
+    if (!rainfall.size())
+        return 1;
 
     // calculate average and heaviest rainfall
     t = rainfall[0];
