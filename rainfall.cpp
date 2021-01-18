@@ -8,15 +8,13 @@
 #include <iostream>
 #include <iomanip>
 #include <vector>
+#include <iterator>
 
 int main() {
 
     // input hourly rainfall data
-    std::vector<double> rainfall;
-    double n;
-    while (std::cin >> n) {
-        rainfall.push_back(n);
-    }
+    std::vector<double> rainfall{ std::istream_iterator<double>(std::cin),
+                                  std::istream_iterator<double>() };
     if (!rainfall.size())
         return 1;
 
