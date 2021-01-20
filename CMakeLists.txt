@@ -1,6 +1,6 @@
 # @file CMakeLists.txt
 # 
-# CMake files for read experiments
+# CMake files for the rainfall program
 
 cmake_minimum_required(VERSION 3.10)
 
@@ -25,7 +25,7 @@ add_executable(rainfall rainfall.cpp)
 # run command
 add_custom_target(run $<TARGET_FILE:rainfall> < ${CMAKE_SOURCE_DIR}/rainfall.csv)
 
-# test command
+# check command
 add_custom_target(check 
     COMMAND $<TARGET_FILE:rainfall> < ${CMAKE_SOURCE_DIR}/rainfall.csv > testrun.txt
     COMMAND diff ${CMAKE_SOURCE_DIR}/report.txt testrun.txt
